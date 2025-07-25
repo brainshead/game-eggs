@@ -35,7 +35,7 @@ The last update to the egg changes the server to use txadmin to run. On first st
 > [!WARNING]
 > ### Your server will not go online until it's started from txadmin
 
-With latest update see [txAdmingithub](https://github.com/citizenfx/txAdmin/blob/master/docs/env-config.md) some things changed.
+With latest update see [txAdmin Github](https://github.com/citizenfx/txAdmin/blob/master/docs/env-config.md) some things changed.
 For now this is added:
 - TXHOST_TXA_PORT (Value can be changed by user)
 - TXHOST_GAME_NAME (Value can be changed by user)
