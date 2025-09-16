@@ -45,6 +45,5 @@ Can be found at [IW4X Docs](https://docs.iw4x.io).
 
 #### __Violation of any rule may result in your server being delisted.__
 
-If you are unsure about the rules or want to report a server please do so via our [Discord server](https://discord.com/invite/pV2qJscTXf). Alternatively write an E-Mail with details (and if applicable) Video proof to `servers [at] iw4x [dot] dev`
-
+If you are unsure about the rules or want to report a server please do so via our [Discord server](https://discord.com/invite/pV2qJscTXf). 
 Discord Server [IW4X](https://discord.com/invite/pV2qJscTXf) 
