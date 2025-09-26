@@ -1,12 +1,12 @@
 name: 🥚 Egg Request
 description: Suggest a server to build an egg for
 title: "[Egg Request]: <Game>"
-labels: ["egg request"]
+type: "Egg Request"
 body:
   - type: markdown
     attributes:
       value: |
-          Make sure there are no existing egg requests by searching the [repository issues](https://github.com/Ptero-Eggs/game-eggs/labels/egg%20request). Please understand how Pterodactyl works when you are requesting an egg. (ie. docker-compose doesn't work for a pterodactyl server)
+          Make sure there are no existing egg requests by searching the [repository issues](https://github.com/Ptero-Eggs/game-eggs/issues?q=state%3Aopen%20type%3A%22Egg%20Request%22). Please understand how Pterodactyl works when you are requesting an egg. (ie. docker-compose doesn't work for a pterodactyl server)
   - type: dropdown
     id: expand
     attributes:

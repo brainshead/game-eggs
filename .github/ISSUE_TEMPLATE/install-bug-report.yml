@@ -1,7 +1,8 @@
 name: 🐛 Install Bug Report
 description: Report an Egg install issue
 title: "[Install Bug]: <Egg Name>"
-labels: ["install bug", "not confirmed"]
+type: "Bug"
+labels: ["Not Confirmed"]
 body:
   - type: markdown
     attributes:
@@ -10,7 +11,7 @@ body:
         * `A fatal error was encountered while starting this server.`
         * `No server egg configuration could be located; aborting startup.`
 
-        Make sure there are no existing bug reports by searching the the issues for [install bugs](https://github.com/Ptero-Eggs/game-eggs/labels/install%20bug).
+        Make sure there are no existing bug reports by searching the the issues for [install bugs](https://github.com/Ptero-Eggs/game-eggs/issues?q=state%3Aopen%20type%3A%22Bug%22).
   - type: input
     id: panel-version
     attributes:
