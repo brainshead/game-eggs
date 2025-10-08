@@ -1,7 +1,8 @@
 # Renown
 Renown is an intense medieval multiplayer survival experience set in a vast, ever-evolving world. Whether alone or rallying allies, gather resources, build powerful strongholds, and engage in brutal battles for dominance.
 
-[!WARNING]The "Direct" connection option is currently broken with no ETA for a fix. You will need to enable public listing and connect via the server list. Set a password to keep it secure.
+> [!WARNING]
+> The "Direct" connection option is currently broken with no ETA for a fix. You will need to enable public listing and connect via the server list. Set a password to keep it secure.
 
 
 ## System Requirements
