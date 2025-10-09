@@ -6,6 +6,8 @@ Renown is an intense medieval multiplayer survival experience set in a vast, eve
 
 
 ## System Requirements
+| | |
+| --- | --- |
 | RAM | 5GB+ |
 | Storage | 15 GB |
 
