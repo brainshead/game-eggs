@@ -12,7 +12,7 @@ This can be found on the modpack page by clicking the wanted file and copying th
 The script will automatically setup of Forge, NeoForge, Fabric, or Quilt depending on the modpack.
 
 You *must* specify a CurseForge API key. 
-You can find out how to get an API key [here](https://support.curseforge.com/en/support/solutions/articles/9000208346-about-the-curseforge-api-and-how-to-apply-for-a-key)
+You can get an API key [here](https://console.curseforge.com/)
 
 ## Server Ports
 
