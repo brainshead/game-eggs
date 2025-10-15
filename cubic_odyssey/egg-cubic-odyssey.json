@@ -12,7 +12,7 @@
         "steam_disk_space"
     ],
     "docker_images": {
-        "ghcr.io\/ptero-eggs\/yolks:wine_staging": "ghcr.io\/ptero-eggs\/yolks:wine_staging"
+        "ghcr.io\/ptero-eggs\/yolks:wine_latest": "ghcr.io\/ptero-eggs\/yolks:wine_latest"
     },
     "file_denylist": [],
     "startup": "wine .\/server\/CubicOdysseyServer.exe -Port={{GAME_PORT}} -Password={{SERVER_PASSWORD}} -Gamemode={{GAMEMODE}} -MaxNumPlayers={{MAX_PLAYERS}}",
@@ -32,7 +32,7 @@
     "variables": [
         {
             "name": "Steam Username",
-            "description": "A steam username of an account that owns the game is required",
+            "description": "A steam username of an account that owns the server tool is required",
             "env_variable": "STEAM_USER",
             "default_value": "",
             "user_viewable": true,
