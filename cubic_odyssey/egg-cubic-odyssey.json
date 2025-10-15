@@ -157,7 +157,7 @@
             "default_value": "3858450",
             "user_viewable": false,
             "user_editable": false,
-            "rules": "required|string|max:20",
+            "rules": "required|string|in:3858450",
             "field_type": "text"
         },
         {
