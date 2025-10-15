@@ -91,7 +91,7 @@ Below is a categorized list of games with links to their respective server confi
 
 #### [DDNet](./ddnet)
 
-#### [DDRace Network](./dracenetwork)
+#### [DDRace Network](./ddracenetwork)
 
 #### [Dead Matter](./dead_matter)
 
