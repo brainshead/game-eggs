@@ -6,7 +6,7 @@
     },
     "exported_at": "2025-10-16T03:31:30+02:00",
     "name": "KSP - LunaMultiplayer",
-    "author": "panel@aquahosting.nl",
+    "author": "brainshead@gmail.com",
     "description": "Dedicated server for the LunaMultiplayer (LMP) mod for Kerbal Space Program. Automatically installs the latest or specified version from GitHub. Runs on .NET 5 using the official Ptero-Eggs yolk.",
     "features": null,
     "docker_images": {
