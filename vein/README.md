@@ -5,14 +5,13 @@
 
 ## [Documentation](https://ramjet.notion.site/Server-Hosting-85f92f43f32548c1b5b33797ddf456ad)
 
-## Installation/System Requirements
-<!--Make changes to reflect the server minimum/recommended hardware specs-->
+
 ## Installation/System Requirements
 |  | Bare Minimum | Recommended |
 |---------|---------|---------|
 | Processor | Almost any proccessor will work (AMD64 only) | -|
-| RAM | 3 GiB | 4 GiB |
-| Storage | 6 GiB | 8 GiB |
+| RAM | 12 GiB | 16 GiB |
+| Storage | 15 GiB | 20 GiB |
 | Network | Any reasonable speed |- |
 | Game Ownership | Not needed | * |   
 
