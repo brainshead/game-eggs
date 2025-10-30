@@ -33,4 +33,4 @@ jobs:
             --exact-timestamps \
             --exclude ".git/*" \
             --exclude ".github/*" \
-            --exclude "egg-*.json"
+            --exclude "**/egg-*.json"
