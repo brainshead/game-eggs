@@ -33,4 +33,5 @@ jobs:
             --exact-timestamps \
             --exclude ".git/*" \
             --exclude ".github/*" \
+            --exclude "**/README.md" \
             --exclude "**/egg-*.json"
