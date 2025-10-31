@@ -31,7 +31,9 @@ jobs:
             --follow-symlinks \
             --delete \
             --exact-timestamps \
-            --exclude ".git/*" \
-            --exclude ".github/*" \
+            --exclude "*" \
+            --include "**/*" \
+            --exclude ".*" \
             --exclude "**/README.md" \
-            --exclude "**/egg-*.json"
+            --exclude "**/egg-*.json" \
+            --exclude "**/meta-*.json"
