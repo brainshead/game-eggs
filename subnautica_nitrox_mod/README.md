@@ -14,7 +14,7 @@ This will only work if you receive Steamguard codes via mail. The Authenticator 
 
 ## NOTE 2
 
-NitroxMod version >=1.5.0.0 is required for this egg
+NitroxMod version >=1.8.0.0 is required for this egg
 
 ## Server Ports
 
@@ -22,4 +22,4 @@ The nitrox server requires only the default Server port.
 
 | Port   | default |
 |--------|---------|
-| Server |   any   |
+| Server |   11000   |
