@@ -4,7 +4,7 @@
         "version": "PTDL_v2",
         "update_url": "https:\/\/pterodactyleggs.com\/egg\/6735ff6d4924a4e9bbcc2743\/download\/egg-subnautica.json"
     },
-    "exported_at": "2025-11-06T23:04:20+01:00",
+    "exported_at": "2025-11-07T15:36:35+01:00",
     "name": "Subnautica",
     "author": "ptero@redbananaofficial.com",
     "description": "Subnautica is an open world survival action-adventure video game developed and published by Unknown Worlds Entertainment. In it, players are free to explore the ocean on an alien planet, known as planet 4546B, after their spaceship, the Aurora, crashes on the planet's surface.\r\n\r\nNote: NitroxMod version >=1.8.0.0 is required",
@@ -33,7 +33,7 @@
         {
             "name": "APP ID",
             "description": "The ID corresponding to the game to download.",
-            "env_variable": "APPID",
+            "env_variable": "SRCDS_APPID",
             "default_value": "264710",
             "user_viewable": false,
             "user_editable": false,
@@ -178,6 +178,16 @@
             "user_viewable": true,
             "user_editable": false,
             "rules": "required|string",
+            "field_type": "text"
+        },
+        {
+            "name": "WINDOWS_INSTALL",
+            "description": "",
+            "env_variable": "WINDOWS_INSTALL",
+            "default_value": "1",
+            "user_viewable": false,
+            "user_editable": false,
+            "rules": "required|string|max:20",
             "field_type": "text"
         }
     ]
