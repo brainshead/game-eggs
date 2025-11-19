@@ -141,6 +141,9 @@ Below is a categorized list of games with links to their respective server confi
 * [Vanilla](./hlds_server/vanilla)
 * [Half-Life 2: Deathmatch](./half_life_2_deathmatch/)
 
+#### Just Cause
+* [Just Cause 3](./jc/jc3)
+
 #### [Hogwarp](./hogwarp)
 
 #### [Holdfast](./holdfast)
