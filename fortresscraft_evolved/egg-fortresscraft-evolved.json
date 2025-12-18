@@ -4,7 +4,7 @@
         "version": "PTDL_v2",
         "update_url": null
     },
-    "exported_at": "2025-12-17T16:35:45+01:00",
+    "exported_at": "2025-12-18T02:47:27+01:00",
     "name": "Fortresscraft Evolved",
     "author": "brainshead@gmail.com",
     "description": "FortressCraft Evolved is a unique blend of Voxel Landscapes, Tower Defense, Crafting, Logistics, Exploration, Combat and Assembly lines. Players begin by crash-landing on a strange alien world, left with only a small handful of starting machines..",
@@ -109,8 +109,8 @@
             "field_type": "text"
         },
         {
-            "name": "[SERVER] RCCON Password",
-            "description": "",
+            "name": "[SERVER] RCON Password",
+            "description": "RCON Password",
             "env_variable": "RCON_PASSWORD",
             "default_value": "changeme",
             "user_viewable": true,
@@ -120,12 +120,12 @@
         },
         {
             "name": "[SERVER] Max Players",
-            "description": "",
+            "description": "Max Players (default is 64)",
             "env_variable": "MAX_PLAYERS",
             "default_value": "64",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "required|string|max:20",
+            "rules": "required|integer|min:1|max:64",
             "field_type": "text"
         },
         {
@@ -160,7 +160,7 @@
         },
         {
             "name": "[GAME WORLD] Resources",
-            "description": "",
+            "description": "Choices are : Rapid, Plentiful, Scarce, Greg",
             "env_variable": "G_RESOURCE",
             "default_value": "scarce",
             "user_viewable": true,
@@ -170,7 +170,7 @@
         },
         {
             "name": "[GAME WORLD] Conveyors",
-            "description": "",
+            "description": "Speed of conveyors : Slow, Fast",
             "env_variable": "G_CONVEYOR",
             "default_value": "slow",
             "user_viewable": true,
@@ -180,7 +180,7 @@
         },
         {
             "name": "[GAME WORLD] Power",
-            "description": "",
+            "description": "Power Choices : Scarce, Plentiful",
             "env_variable": "G_POWER",
             "default_value": "scarce",
             "user_viewable": true,
@@ -190,7 +190,7 @@
         },
         {
             "name": "[GAME WORLD] Day",
-            "description": "",
+            "description": "Day Choices : Eternal, Normal, Night",
             "env_variable": "G_DAY",
             "default_value": "normal",
             "user_viewable": true,
