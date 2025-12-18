@@ -114,6 +114,8 @@ Below is a categorized list of games with links to their respective server confi
 
 #### [Fistful of Frags (FoF)](./fof)
 
+### [FortressCraft Evolved](./fortresscraft_evolved) 
+
 #### [Foundry](./foundry)
 
 #### [Foundry Virtual Tabletop (VTT)](./foundry_vtt)
