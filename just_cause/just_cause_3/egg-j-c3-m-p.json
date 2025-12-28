@@ -95,7 +95,7 @@
             "default_value": "4202",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "required|string",
+            "rules": "required|integer|between:1,65535",
             "field_type": "text"
         },
         {
