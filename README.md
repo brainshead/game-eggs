@@ -157,6 +157,10 @@ Below is a categorized list of games with links to their respective server confi
 
 #### [IOSoccer](./iosoccer)
 
+#### Just Cause
+* [Just Cause 3](./just_cause/just_cause_3)
+
+
 #### [Killing Floor 2](./killing_floor_2)
 
 #### [Kerbal Space Program (KSP)](./ksp)
