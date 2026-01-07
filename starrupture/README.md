@@ -2,6 +2,9 @@
 
 StarRupture is a first-person open world base-building game with advanced combat and tons of exploration. Play alone or in a group on this sublime and ever-changing planet, extract and manage resources, create your complex industrial system and fight off hordes of alien monsters.
 
+## Server software is still in experimental fase.  
+So expect some breaks in future!
+
  ### Author & Contributers
 | Name        | Github Profile  |
 | ------------- |-------------|
@@ -26,7 +29,7 @@ This can be changed to any port.
 
 
 ## Settings
-You have 3 ways to create/load worlds/saves
+You have 2 ways to create/load worlds/saves
 1. ### By using ingame Server management.   
    But some people have issues this way.
    
@@ -101,6 +104,7 @@ You have 3 ways to create/load worlds/saves
   6. Enter the join password that players will use when connecting to your server.  
   7. Click Back (or press ESC) Do not attempt to create a new game or load a game at this point   
   8. Stop your server and contiune with the DSSettings.txt configuration above   
+
 
 
 
