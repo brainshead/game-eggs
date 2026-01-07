@@ -57,8 +57,8 @@ You have 3 ways to create/load worlds/saves
   true → Forces creation of a new world.    
   false → Prevents new save creation.  
   ### LoadSavedGame
-true → Loads an existing save  
-false → Skips loading saved data 
+  true → Loads an existing save  
+  false → Skips loading saved data 
 
   ### Creating a New Save (New World)
   1. Stop the server  
@@ -84,12 +84,13 @@ false → Skips loading saved data
   "LoadSavedGame": "true",
   "SaveGameName": "AutoSave0.sav"
   ```  
-  3. Upload your save game .sav and .met file to the server
-  4. Rename these files to be AutoSave0.sav and AutoSave0.met
-  5. Start the server and join it.  There is no need to use the in-game server manager tool
+  3. Upload your save game .sav and .met file to the server  
+     Location of saves : `/home/container/StarRupture/Saved/SaveGames`        
+  5. Rename these files to be AutoSave0.sav and AutoSave0.met  
+  6. Start the server and join it.  There is no need to use the in-game server manager tool    
   
    
-3. ### Using A Join Password
+ ### Using A Join Password
   If you wish to setup a Join Password you will have to do this before using DSSettings.txt. We are currently not aware of any method to configure a join password either via parameters or DSSettings.txt.
 
   1. Start your server, ensuring no DSSettings.txt file exists  
@@ -100,6 +101,7 @@ false → Skips loading saved data
   6. Enter the join password that players will use when connecting to your server.  
   7. Click Back (or press ESC) Do not attempt to create a new game or load a game at this point   
   8. Stop your server and contiune with the DSSettings.txt configuration above   
+
 
 
 
