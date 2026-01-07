@@ -13,7 +13,7 @@
         "Wine Latest": "ghcr.io\/ptero-eggs\/yolks:wine_latest"
     },
     "file_denylist": [],
-    "startup": "wine StarRuptureServerEOS.exe -MULTIHOME=0.0.0.0 -Port=${SERVER_PORT} -log & tail -f \/home\/container\/StarRupture\/Saved\/Logs\/StarRupture.log | grep -v -E \"LogCore: Warning|LogUObjectBase: Error\"",
+    "startup": "wine StarRuptureServerEOS.exe -Port=${SERVER_PORT} -log & tail -f \/home\/container\/StarRupture\/Saved\/Logs\/StarRupture.log | grep -v -E \"LogCore: Warning|LogUObjectBase: Error\"",
     "config": {
         "files": "{}",
         "startup": "{\r\n    \"done\": \"OnUpdateSessionComplete\"\r\n}",
