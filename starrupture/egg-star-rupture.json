@@ -4,7 +4,7 @@
         "version": "PTDL_v2",
         "update_url": null
     },
-    "exported_at": "2026-01-07T19:10:46+01:00",
+    "exported_at": "2026-01-08T15:36:50+01:00",
     "name": "StarRupture",
     "author": "brainshead@gmail.com",
     "description": "StarRupture is a first-person open world base-building game with advanced combat and tons of exploration. Play alone or in a group on this sublime and ever-changing planet, extract and manage resources, create your complex industrial system and fight off hordes of alien monsters.",
@@ -13,7 +13,7 @@
         "Wine Latest": "ghcr.io\/ptero-eggs\/yolks:wine_latest"
     },
     "file_denylist": [],
-    "startup": "wine StarRuptureServerEOS.exe -Port=${SERVER_PORT} -log & tail -f \/home\/container\/StarRupture\/Saved\/Logs\/StarRupture.log | grep -v -E \"LogCore: Warning|LogUObjectBase: Error\"",
+    "startup": "cd \/home\/container\/StarRupture\/Binaries\/Win64; wine .\/StarRuptureServerEOS-Win64-Shipping.exe  -Log -Port=${SERVER_PORT} & SR_PID=$!; tail -c0 -F \/home\/container\/StarRupture\/Saved\/Logs\/StarRupture.log --pid=$SR_PID | grep -v -E \"LogCore: Warning|LogUObjectBase: Error\"",
     "config": {
         "files": "{}",
         "startup": "{\r\n    \"done\": \"OnUpdateSessionComplete\"\r\n}",
@@ -102,7 +102,7 @@
             "name": "[SYSTEM] Wine Debug",
             "description": "",
             "env_variable": "WINEDEBUG",
-            "default_value": "err+warn",
+            "default_value": "-all",
             "user_viewable": false,
             "user_editable": false,
             "rules": "required|string|max:20",
