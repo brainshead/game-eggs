@@ -34,8 +34,7 @@ This can be changed to any port.
 ### Password Protection
 
 > ⚠️ **Warning:** Anyone who knows your IP and port can join your server if no password is set!
-There is currently no way to configure a password via command-line parameters or `DSSettings.txt`. You must set the password through the game client:
-
+### Option 1: In-Game Server Management
 1. Start your server (ensure no `DSSettings.txt` file exists).
 2. Open the StarRupture game client.
 3. From the main menu, open **Manage Server** and connect to your server.
@@ -44,6 +43,14 @@ There is currently no way to configure a password via command-line parameters or
 6. Press **Back** (or ESC). **Do not** create or load a game at this point.
 7. Stop your server.
 8. Continue with the `DSSettings.txt` configuration below.
+
+
+### Option 2: Manual way
+1. Visit https://starrupture-utilities.com/passwords
+2. Generate both an Admin password and a Player Password
+3. Create `Password.json` in root of the container (`/home/container/`) and paste the contents of the site's password.json field into it
+4. Create `PlayerPassword.json` in root of the container (`/home/container/`) and paste the contents of the site's playerpassword.json field into it
+5. Start server or following Save Game Management below.
 
 ---
 
@@ -57,7 +64,7 @@ There are two ways to manage save games:
 2. Enter your server IP and port to connect.
 3. From here, you can create a new world or load an existing save.
 
-### Option 2: Manual Configuration (No Password Protection.Loading save when server starts.)
+### Option 2: Manual Configuration (Loading save when server starts.)
 
 Create a `DSSettings.txt` file in the root directory (`/home/container/`) with the following content:
 
@@ -120,3 +127,4 @@ Create a `DSSettings.txt` file in the root directory (`/home/container/`) with t
    ```
 4. Rename the files to `AutoSave0.sav` and `AutoSave0.met`.
 5. Start the server and join.
+
