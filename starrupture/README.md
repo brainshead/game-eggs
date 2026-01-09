@@ -24,8 +24,8 @@ This can be changed to any port.
 
 | Type        | Memory | Storage |
 |-------------|--------|---------|
-| Minimal     | 2 GB   | 25 GB   |
-| Recommended | 4+ GB  | 40 GB+  |
+| Bare Minimal| 4 GB   | 25 GB   |
+| Recommended | 12~16+ GB | 40 GB+  |
 
 ---
 
@@ -127,4 +127,5 @@ Create a `DSSettings.txt` file in the root directory (`/home/container/`) with t
    ```
 4. Rename the files to `AutoSave0.sav` and `AutoSave0.met`.
 5. Start the server and join.
+
 
