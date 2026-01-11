@@ -4,7 +4,7 @@
         "version": "PTDL_v2",
         "update_url": null
     },
-    "exported_at": "2025-02-20T14:01:00+00:00",
+    "exported_at": "2026-01-11T07:12:57+00:00",
     "name": "R5Reloaded",
     "author": "eggs@purpleflaghosting.com",
     "description": "R5Reloaded - Modded Apex Legends server",
@@ -52,7 +52,7 @@
             "name": "Download URL",
             "description": "URL to download R5Reloaded server build from",
             "env_variable": "DL_URL",
-            "default_value": "https:\/\/cdn.r5r.org\/dedicated_builds\/server_v2.5_r5_745024d1.7z",
+            "default_value": "https:\/\/r5reloaded.com\/server-download",
             "user_viewable": false,
             "user_editable": false,
             "rules": "required|string|max:500",
