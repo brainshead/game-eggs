@@ -20,7 +20,7 @@
         "files": "{}",
         "startup": "{\n    \"done\": \"Hytale Server Booted\"\n}",
         "logs": "{}",
-        "stop": "stop"
+        "stop": "/stop"
     },
     "scripts": {
         "installation": {
