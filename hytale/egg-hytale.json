@@ -15,7 +15,7 @@
         "ghcr.io/pterodactyl/games:hytale": "ghcr.io/pterodactyl/games:hytale"
     },
     "file_denylist": [],
-    "startup": "java -XX:AOTCache=HytaleServer.aot -Xms128M $( ((SERVER_MEMORY)) && printf %s \"-Xmx${SERVER_MEMORY}M\" ) -jar HytaleServer.jar $( ((HYTALE_ALLOW_OP)) && printf %s \"--allow-op\" )",
+    "startup": "java -XX:AOTCache=HytaleServer.aot -Xms128M $( ((SERVER_MEMORY)) && printf %s \"-Xmx${SERVER_MEMORY}M\" ) -jar HytaleServer.jar $( ((HYTALE_ALLOW_OP)) && printf %s \"--allow-op\" ) --bind 0.0.0.0:${SERVER_PORT}",
     "config": {
         "files": "{}",
         "startup": "{}",
