@@ -18,7 +18,7 @@
     "startup": "java -XX:AOTCache=HytaleServer.aot -Xms128M $( ((SERVER_MEMORY)) && printf %s \"-Xmx${SERVER_MEMORY}M\" ) -jar HytaleServer.jar $( ((HYTALE_ALLOW_OP)) && printf %s \"--allow-op\" )",
     "config": {
         "files": "{}",
-        "startup": "TODO",
+        "startup": "{}",
         "logs": "{}",
         "stop": "/stop"
     },
