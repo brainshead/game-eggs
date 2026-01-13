@@ -151,6 +151,8 @@ Below is a categorized list of games with links to their respective server confi
 
 #### [Hurtworld](./hurtworld)
 
+#### [Hytale](./hytale)
+
 #### [Icarus](./icarus)
 
 #### [Insurgency: Sandstorm](./insurgency_sandstorm)
