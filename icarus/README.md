@@ -17,6 +17,13 @@ ___
             <a href="https://github.com/BolverBlitz" title="Codes">💻</a>
             <a href="https://github.com/BolverBlitz" title="Maintains">🔨</a>
         </td>
+        <td align="center">
+            <a href="https://github.com/Red-Banana-Official">
+                <img src="https://avatars.githubusercontent.com/Red-Banana-Official" width="50px;" alt=""/><br /><sub><b>Red-Banana-Official</b></sub>
+            </a>
+            <br />
+            <a href="https://github.com/Red-Banana-Official" title="Codes">💻</a>
+        </td>
     </tr>
 </table>
 <!-- markdownlint-enable -->
