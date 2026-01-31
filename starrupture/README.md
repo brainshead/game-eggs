@@ -24,108 +24,114 @@ This can be changed to any port.
 
 | Type        | Memory | Storage |
 |-------------|--------|---------|
-| Bare Minimal| 4 GB   | 25 GB   |
+| Bare Minimal| 6 GB   | 25 GB   |
 | Recommended | 12~16+ GB | 40 GB+  |
+
+## Configuration Files
+
+| File                | Purpose                      | Path                                       |
+|---------------------|------------------------------|--------------------------------------------|
+| DSSettings.txt      | Server configuration for save management   | /home/container/DSSettings.txt |
+| Password.json       | Admin password configuration | /home/container/Password.json              |
+| PlayerPassword.json | Server join password configuration | /home/container/PlayerPassword.json        |
+| .pteroignore        | Files/folders to ignore during backups | /home/container/.pteroignore               |
+
+Unofficial documentation: https://wiki.starrupture-utilities.com/en/dedicated-server/configuration
 
 ---
 
 ## Configuration
 
-### Password Protection
+# Setup Methods
+
+There are two ways to configure your server: via the **Panel** (recommended) or **In-Game**. Choose one method and follow it consistently.
+
+---
+
+## Method 1: Panel Configuration (Recommended)
+
+This method uses the Pterodactyl Panel and DSSettings.txt for all configuration. It is the recommended approach because settings persist across server restarts, and the in-game management system has known vulnerabilities, such as wiping saves and changing admin passwords. Read more: https://wiki.starrupture-utilities.com/en/dedicated-server/Vulnerability-Announcement
+
+> ⚠️ **Important:** Always stop the server before making configuration changes.
+
+### Password Setup
 
 > ⚠️ **Warning:** Anyone who knows your IP and port can join your server if no password is set!
-### Option 1: In-Game Server Management
-1. Start your server (ensure no `DSSettings.txt` file exists).
-2. Open the StarRupture game client.
-3. From the main menu, open **Manage Server** and connect to your server.
-4. When prompted, configure an **Admin Password**.
-5. Click **Change Password** and enter the join password for players.
-6. Press **Back** (or ESC). **Do not** create or load a game at this point.
-7. Stop your server.
-8. Continue with the `DSSettings.txt` configuration below.
 
+#### Automatic Setup (Recommended)
 
-### Option 2: Manual way
+If you set the `[SERVER] Admin Password` and `[SERVER] Player Password` variables in the **Startup** tab before installing the server, the password files will be created automatically during installation.
+
+#### Manual Setup
+
+If you didn't set passwords during installation, you can create them manually:
+
 1. Visit https://starrupture-utilities.com/passwords
-2. Generate both an Admin password and a Player Password
-3. Create `Password.json` in root of the container (`/home/container/`) and paste the contents of the site's password.json field into it
-4. Create `PlayerPassword.json` in root of the container (`/home/container/`) and paste the contents of the site's playerpassword.json field into it
-5. Start server or following Save Game Management below.
+2. Generate both an Admin password and a Player password
+3. Create `Password.json` in the root of the container (`/home/container/`) and paste the generated content
+4. Create `PlayerPassword.json` in the root of the container (`/home/container/`) and paste the generated content
+5. Start the server
+
+### Save Game Settings
+
+The egg manages `DSSettings.txt` automatically via the Panel's **Startup** tab.
+
+| Panel Option               | DSSettings.txt Key | Description                                                    |
+|----------------------------|--------------------|----------------------------------------------------------------|
+| `[SERVER] Session Name`    | `SessionName`      | Name of the save game session (max 20 characters)              |
+| `[SERVER] Save Interval`   | `SaveGameInterval` | Time between automatic saves in seconds (e.g., `300` = 5 mins) |
+| `[SERVER] Start new Savegame` | `StartNewGame`  | `true` to create a new world (use only once!)                  |
+| `[SERVER] Load saved Game` | `LoadSavedGame`    | `true` to load an existing save on startup                     |
+| `[SERVER] Savegame Name`   | `SaveGameName`     | Filename of the save to load (e.g., `AutoSave0.sav`)           |
+
+### Creating a New World
+
+> ⚠️ **Important:** Only enable `Start new Savegame` for initial world creation - disable it immediately after!
+
+1. Stop the server
+2. Go to the **Startup** tab in the Panel
+3. Set `[SERVER] Load saved Game` to `false`
+4. Set `[SERVER] Start new Savegame` to `true`
+5. Start the server and wait for it to finish loading
+    1. Join using the server's WAN IP and port
+    2. Press ESC to open the menu and then select Save. This will instruct the server to save the file to `StarRupture\Saved\SaveGames\SessionName`
+    3. Disconnect from the server
+6. Stop the server
+7. Set `[SERVER] Load saved Game` to `true`
+8. Set `[SERVER] Start new Savegame` to `false`
+9. Start the server - your world will now load automatically on every startup
+
+### Loading an Existing Save
+
+1. Stop the server
+2. Go to the **Startup** tab in the Panel
+3. Set `[SERVER] Load saved Game` to `true`
+4. Set `[SERVER] Start new Savegame` to `false`
+5. Set `[SERVER] Savegame Name` to match your save file (e.g., `AutoSave0.sav`)
+6. Set `[SERVER] Session Name` to match your session folder name (e.g., `StarRuptureServer`)
+7. Start the server
 
 ---
 
-## Save Game Management
+## Method 2: In-Game Configuration
 
-There are two ways to manage save games:
+This method uses the game's built-in **Manage Server** feature. Only use this method if you have issues with DSSettings.txt and are aware of the vulnerabilities mentioned above.
 
-### Option 1: In-Game Server Management
+> ⚠️ **Important:** For this method to work, `DSSettings.txt` must **not** exist. Shutdown the server and delete it if present. You'll be stuck on a loading spinner when trying to connect if it exists. You must also remove `-RCWebControlDisable` and `-RCWebInterfaceDisable` from the startup parameters in the **Startup** tab.
 
-1. From the main menu, click **Manage Server**.
-2. Enter your server IP and port to connect.
-3. From here, you can create a new world or load an existing save.
+### Password Setup
 
-### Option 2: Manual Configuration (Loading save when server starts.)
+1. Start your server
+2. Open the StarRupture game client
+3. From the main menu, select **Manage Server** and connect to your server
+4. When prompted, configure an **Admin Password**
+5. Click **Change Password** to set the player join password
 
-Create a `DSSettings.txt` file in the root directory (`/home/container/`) with the following content:
+### Save Game Management
 
-```json
-{
-  "SessionName": "MySaveGame",
-  "SaveGameInterval": "300",
-  "StartNewGame": "false",
-  "LoadSavedGame": "true",
-  "SaveGameName": "AutoSave0.sav"
-}
-```
+1. Start your server
+2. Open the StarRupture game client
+3. From the main menu, select **Manage Server** and connect to your server
+4. Use the in-game interface to create a new world or load an existing save
 
----
-
-## Configuration Options
-
-| Option           | Description                                                                 |
-|------------------|-----------------------------------------------------------------------------|
-| `SessionName`    | Name of the save game session. Maximum 20 characters.                       |
-| `SaveGameInterval` | Time between automatic saves in seconds (e.g., `300` = 5 minutes).        |
-| `StartNewGame`   | `true` to create a new world, `false` to prevent new save creation.         |
-| `LoadSavedGame`  | `true` to load an existing save, `false` to skip loading saved data.        |
-| `SaveGameName`   | Filename of the save to load (e.g., `AutoSave0.sav`).                       |
-
----
-
-## Creating a New World
-
-> ⚠️ **Important:** Only set `StartNewGame` to `true` once when creating a new world!
-1. Stop the server.
-2. Update `DSSettings.txt`:
-   ```json
-   "StartNewGame": "true",
-   "LoadSavedGame": "false"
-   ```
-3. Start the server and wait for it to finish loading.
-4. Stop the server.
-5. Revert `DSSettings.txt`:
-   ```json
-   "StartNewGame": "false",
-   "LoadSavedGame": "true"
-   ```
-6. Start the server and join.
-
----
-
-## Loading an Existing Save
-
-1. Stop the server.
-2. Ensure `DSSettings.txt` contains:
-   ```json
-   "StartNewGame": "false",
-   "LoadSavedGame": "true",
-   "SaveGameName": "AutoSave0.sav"
-   ```
-3. Upload your `.sav` and `.met` files to:
-   ```
-   /home/container/StarRupture/Saved/SaveGames
-   ```
-4. Rename the files to `AutoSave0.sav` and `AutoSave0.met`.
-5. Start the server and join.
-
-
+> ⚠️ **Note:** With this method, you will need to load your save via the in-game interface each time the server restarts.
