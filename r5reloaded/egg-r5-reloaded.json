@@ -4,7 +4,7 @@
         "version": "PTDL_v2",
         "update_url": null
     },
-    "exported_at": "2026-01-11T07:12:57+00:00",
+    "exported_at": "2026-02-01T03:48:16+00:00",
     "name": "R5Reloaded",
     "author": "eggs@purpleflaghosting.com",
     "description": "R5Reloaded - Modded Apex Legends server",
@@ -13,7 +13,7 @@
         "ghcr.io\/ptero-eggs\/yolks:wine_latest": "ghcr.io\/ptero-eggs\/yolks:wine_latest"
     },
     "file_denylist": [],
-    "startup": "wine64 r5apex_ds.exe -noconsole -port {{SERVER_PORT}} +launchplaylist \"{{PLAYLIST}}\" +hostname \"{{SERVER_NAME}}\" {{ARGS}}",
+    "startup": "wine r5apex_ds.exe -noconsole -port {{SERVER_PORT}} +launchplaylist \"{{PLAYLIST}}\" +hostname \"{{SERVER_NAME}}\" {{ARGS}}",
     "config": {
         "files": "{}",
         "startup": "{\"done\":\":Installed NetKey:\"}",

@@ -40,7 +40,7 @@ ___
 
 ### Egg Capabilities
 
-- Currently runs the Windows build of the server via Wine64.
+- Currently runs the Windows build of the server via wine.
 - Auto-Updates on restart.
 
 ___

@@ -4,7 +4,7 @@
         "version": "PTDL_v2",
         "update_url": null
     },
-    "exported_at": "2023-08-11T21:40:04+02:00",
+    "exported_at": "2026-02-01T03:48:16+00:00",
     "name": "PixARK",
     "author": "hello@venatus.digital",
     "description": "A simple Docker container with Wine to run PixARK using Pterodactyl Panel",
@@ -15,7 +15,7 @@
         "ghcr.io\/ptero-eggs\/yolks:wine_latest": "ghcr.io\/ptero-eggs\/yolks:wine_latest"
     },
     "file_denylist": [],
-    "startup": "wine64 .\/ShooterGame\/Binaries\/Win64\/PixARKServer.exe \"CubeWorld_Light?listen?DelayRegisterServer=True?bRawSockets=True?SessionName=\"{{SRV_NAME}}\"?AltSaveDirectoryName=PteroPixArk?ServerPassword={{ARK_PASSWORD}}?ServerAdminPassword={{ARK_ADMIN_PASSWORD}}?MaxPlayers={{MAX_PLAYERS}}?RCONEnabled=True?RCONPort={{RCPORT}}\" -Seed=12345 -OreSeed=1234 -ConfigsUseAltDir -server -gameplaylogging -log -CULTUREFORCOOKING=en -NoBattlEye -QueryPort={{QPORT}} -Port={{SERVER_PORT}} -CubePort={{CUBEPORT}} -cubeworld={{SRV_NAME}} -nosteamclient -NoHangDetection",
+    "startup": "wine .\/ShooterGame\/Binaries\/Win64\/PixARKServer.exe \"CubeWorld_Light?listen?DelayRegisterServer=True?bRawSockets=True?SessionName=\"{{SRV_NAME}}\"?AltSaveDirectoryName=PteroPixArk?ServerPassword={{ARK_PASSWORD}}?ServerAdminPassword={{ARK_ADMIN_PASSWORD}}?MaxPlayers={{MAX_PLAYERS}}?RCONEnabled=True?RCONPort={{RCPORT}}\" -Seed=12345 -OreSeed=1234 -ConfigsUseAltDir -server -gameplaylogging -log -CULTUREFORCOOKING=en -NoBattlEye -QueryPort={{QPORT}} -Port={{SERVER_PORT}} -CubePort={{CUBEPORT}} -cubeworld={{SRV_NAME}} -nosteamclient -NoHangDetection",
     "config": {
         "files": "{}",
         "startup": "{\r\n    \"done\": \"Full Startup:\"\r\n}",
