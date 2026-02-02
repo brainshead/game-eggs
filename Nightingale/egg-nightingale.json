@@ -10,7 +10,7 @@
     "description": "Nightingale is an open world survival crafting game, where you\u2019ll adventure across the mysterious and dangerous Fae Realms. As a daring Realmwalker, you\u2019ll defeat monstrous enemies, survive hostile environments, and build elaborate estates in a visually stunning Gaslamp Fantasy world.",
     "features": null,
     "docker_images": {
-        "Debian": "ghcr.io\/ptero-eggs\/steamcmd:debian"
+        "Ubuntu 24": "ghcr.io\/ptero-eggs\/steamcmd:ubuntu_24.04"
     },
     "file_denylist": [],
     "startup": ".\/NWX\/Binaries\/Linux\/NWXServer-Linux-Shipping NWX -ini:Game:[\/Script\/Engine.GameSession]:MaxPlayers={{MAX_PLAYER}} $( [ \"$CHEATS\" == \"1\" ] && printf %s '-EnableCheats' ) -port={{SERVER_PORT}} -multihome=0.0.0.0",
