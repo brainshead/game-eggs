@@ -13,7 +13,7 @@
         "Debian": "ghcr.io\/ptero-eggs\/steamcmd:debian"
     },
     "file_denylist": [],
-    "startup": ".\/NWX\/Binaries\/Linux\/NWXServer-Linux-Shipping NWX -ini:Game:[\/Script\/Engine.GameSession]:MaxPlayers= {{MAX_PLAYER}} $( [ \"$CHEATS\" == \"1\" ] && printf %s '-EnableCheats' ) -port={{SERVER_PORT}} -multihome=0.0.0.0",
+    "startup": ".\/NWX\/Binaries\/Linux\/NWXServer-Linux-Shipping NWX -ini:Game:[\/Script\/Engine.GameSession]:MaxPlayers={{MAX_PLAYER}} $( [ \"$CHEATS\" == \"1\" ] && printf %s '-EnableCheats' ) -port={{SERVER_PORT}} -multihome=0.0.0.0",
     "config": {
         "files": "{\r\n    \"NWX\/Config\/ServerSettings.ini\": {\r\n        \"parser\": \"file\",\r\n        \"find\": {\r\n            \"StartingDifficulty\": \"StartingDifficulty={{server.build.env.Difficulty}}\",\r\n            \"Password\": \"Password={{server.build.env.PASSWORD}}\",\r\n            \"AdminPassword\": \"AdminPassword={{server.build.env.ADMIN_PASSWORD}}\"\r\n        }\r\n    }\r\n}",
         "startup": "{\r\n    \"done\": \"Game mode became ready\"\r\n}",
