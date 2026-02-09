@@ -30,7 +30,7 @@
     "variables": [
         {
             "name": "[STEAM] Steam User",
-            "description": "This is a required setting and cannot be set to anonymous.",
+            "description": "Steam User Account",
             "env_variable": "STEAM_USER",
             "default_value": "",
             "user_viewable": false,
@@ -159,7 +159,7 @@
             "field_type": "text"
         },
         {
-            "name": "[SERVER] Save Intervall",
+            "name": "[SERVER] Save Interval",
             "description": "Time between automatic saves (in seconds)\r\n\r\n300 = 5 minutes",
             "env_variable": "SAVE_INTERVAL",
             "default_value": "300",
