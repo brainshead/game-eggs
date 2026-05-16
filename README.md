@@ -52,6 +52,8 @@ Below is a categorized list of games with links to their respective server confi
 
 #### [Brickadia](./brickadia)
 
+#### [Carrier Command 2](./carrier_command_2)
+
 #### [Citadel](./citadel)
 
 #### ClassiCube
