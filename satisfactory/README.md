@@ -89,12 +89,12 @@ ___
 
 ### Server Ports
 
-Satisfactory 1.1+ requires **two** ports. The old beacon (15000) and query (15777) ports from pre-1.0 are no longer used — if a guide tells you to forward those, the guide is stale.
+Satisfactory 1.1 and 1.2 require **two** ports. The old beacon (15000) and query (15777) ports from pre-1.0 are no longer used — if a guide tells you to forward those, the guide is stale.
 
 | Port                   | Default | Protocol  | Required | Notes                                                                                                                                              |
 |------------------------|---------|-----------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Primary**            | 7777    | UDP & TCP | **Yes**  | Clients connect using this port. UDP carries game traffic; TCP carries the TLS-encrypted Server Manager / HTTPS API.                               |
-| **Reliable Messaging** | 8888    | TCP       | **Yes**  | Reliable messaging port. Required for Satisfactory 1.1 and above.                                                                                  |
+| **Reliable Messaging** | 8888    | TCP       | **Yes**  | Reliable messaging port. Required for Satisfactory 1.1 and 1.2.                                                                                    |
 
 > [!TIP]
 > Your internal ports **must match** your external ports — Satisfactory does not support port translation (e.g., you can't forward external 7778 → internal 7777). If you run multiple Satisfactory servers on one host, give each its own unique pair and forward both pairs unchanged.
@@ -139,6 +139,8 @@ Once claimed, the **in-game Server Manager** is the only place to configure the 
 - Send Gameplay Data (telemetry/crash reports to Coffee Stain)
 - Network Quality
 
+**Weather (1.2+):** Satisfactory 1.2 added weather controls to the Server Manager. The exact menu is still being iterated across 1.2.x hotfixes (one shipped a fix for *"incorrect menus showing up for weather in the Dedicated Server settings"*), so the canonical list is whatever your running server shows — review it once on first launch after updating.
+
 > [!NOTE]
 > A few settings are **not** in the in-game Server Manager UI and must be set elsewhere:
 > - **Number of Rotating Autosaves** — set via this egg's `NUM_AUTOSAVES` variable (writes to `Engine.ini`).
@@ -150,6 +152,17 @@ Once claimed, the **in-game Server Manager** is the only place to configure the 
 
 > [!CAUTION]
 > Some Server Manager settings (Autosave Interval, Server Restart Interval, Send Gameplay Data) have been reported to revert on server restart. This appears to be an upstream game issue ([game-eggs #443](https://github.com/pterodactyl/game-eggs/issues/443)), not an egg bug — the egg does not write to any in-game Server Manager state. After changing settings in-game, verify they persisted after your next restart.
+
+___
+
+### Game Modes (1.2+)
+
+Satisfactory 1.2 added **Game Modes** — per-world toggles for Cost Multipliers (Space Elevator deliverables, recipe parts, power consumption), World Randomization (resource node placement, node purity), and a shareable World Seed. Dedicated servers fully support them.
+
+Two things to know before using them:
+
+- **Set only at new-world creation.** Game Modes are chosen when the *client* creates a new game via Server Manager → New Game. They cannot be enabled on an existing save and cannot be turned off once active — choices are permanent for that world.
+- **Not exposed by this egg.** There are no `GAME_MODE_*` variables to set on the panel. If you want a non-default Game Mode, create the world on the server from the in-game UI.
 
 ___
 
@@ -195,6 +208,14 @@ If you forget your administrator password or want to reset the server to an uncl
 ```
 
 Your world saves are not affected by deleting this file.
+
+___
+
+### Updating to 1.2
+
+A 1.1 save will open fine in 1.2, but **a 1.2 save will not open in 1.1** — once your server runs a save on 1.2, you cannot roll the server back to 1.1 with that same save. Back up the `SaveGames/server/` directory above before flipping `AUTO_UPDATE` on for the first time after a major version bump.
+
+Vehicle path automation was rebuilt from the ground up in 1.2. Per Coffee Stain, routes recorded under 1.1 *should* continue to work as-is, but multiple reports from the experimental cycle indicate complex multi-stop routes sometimes need to be re-recorded under the new system. If your players rely on truck/tractor automation, verify routes on a copy of the save first.
 
 ___
 
