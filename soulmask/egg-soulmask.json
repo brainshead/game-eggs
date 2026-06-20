@@ -180,7 +180,7 @@
         },
         {
             "name": "Main Server Address",
-            "description": "The IP of the main server to connect to. The presence of the parameter designates the server as a client server in a cluster. 127.0.0.1 = Standalone Mode",
+            "description": "The IP of the main server to connect to. The presence of the parameter designates the server as a client server in a cluster. 127.0.0.1 = Standalone Mode\/Main Server",
             "env_variable": "CLUSTER_MAIN_IP",
             "default_value": "127.0.0.1",
             "user_viewable": true,
