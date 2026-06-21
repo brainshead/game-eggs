@@ -46,4 +46,4 @@ Soulmask requires up to 4 ports. You can choose every port you want.
 - When adding mods , be sure there are no spaces as example: MODID1,MODID2,MODID3
 
 ## Extra Info
-Extrainfo can be found on [saraserenity.net](https://saraserenity.net/soulmask/server_cluster_guide.php)
+Extra info can be found on [saraserenity.net](https://saraserenity.net/soulmask/server_cluster_guide.php)
